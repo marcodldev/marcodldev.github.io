@@ -690,6 +690,46 @@ button:disabled,
   margin-bottom: 0;
 }
 
+.about-scroll-hint {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .about-scroll-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 18px;
+    bottom: 22px;
+    z-index: 180;
+    pointer-events: none;
+    color: rgba(255, 43, 117, 0.62);
+    filter: drop-shadow(0 0 10px rgba(255, 43, 117, 0.35));
+    animation: about-scroll-hint-bob 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes about-scroll-hint-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: translateY(7px);
+    opacity: 0.88;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-scroll-hint {
+    animation: none;
+    opacity: 0.65;
+  }
+}
+
 .about-content,
 .about-creative,
 .about-skills-main {
