@@ -70,11 +70,11 @@ export default function MobileScrollHint({ sectionIndex, sectionSelector }: Mobi
 
   return createPortal(
     <div className="mobile-scroll-hint" aria-hidden="true">
-      <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none">
         <path
           d="M12 5v12M12 17l-5-5M12 17l5-5"
           stroke="currentColor"
-          strokeWidth="2"
+          strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
