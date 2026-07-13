@@ -1,19 +1,24 @@
 import { useEffect, useState } from 'react'
 import { useScroll } from '../../context/ScrollContext'
 
-export default function AboutScrollHint() {
+interface MobileScrollHintProps {
+  sectionIndex: number
+  sectionSelector: string
+}
+
+export default function MobileScrollHint({ sectionIndex, sectionSelector }: MobileScrollHintProps) {
   const { currentSection } = useScroll()
   const [show, setShow] = useState(false)
 
   useEffect(() => {
-    if (currentSection !== 1) {
+    if (currentSection !== sectionIndex) {
       setShow(false)
       return
     }
 
     const mq = window.matchMedia('(max-width: 768px)')
 
-    const getSection = () => document.querySelector('.about-skills') as HTMLElement | null
+    const getSection = () => document.querySelector(sectionSelector) as HTMLElement | null
 
     const update = () => {
       if (!mq.matches) {
@@ -45,12 +50,12 @@ export default function AboutScrollHint() {
       mq.removeEventListener('change', update)
       window.removeEventListener('resize', update)
     }
-  }, [currentSection])
+  }, [currentSection, sectionIndex, sectionSelector])
 
   if (!show) return null
 
   return (
-    <div className="about-scroll-hint" aria-hidden="true">
+    <div className="mobile-scroll-hint" aria-hidden="true">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
         <path
           d="M12 5v12M12 17l-5-5M12 17l5-5"

@@ -1,7 +1,7 @@
 import Section from '../Section'
 import SkillsRibbon from '../skills/SkillsRibbon'
 import VhsTimeline from '../about/VhsTimeline'
-import AboutScrollHint from '../about/AboutScrollHint'
+import MobileScrollHint from '../ui/MobileScrollHint'
 import { useScroll } from '../../context/ScrollContext'
 
 export default function AboutSkills() {
@@ -45,7 +45,7 @@ export default function AboutSkills() {
 
         <SkillsRibbon />
       </div>
-      <AboutScrollHint />
+      <MobileScrollHint sectionIndex={1} sectionSelector=".about-skills" />
     </Section>
   )
 }

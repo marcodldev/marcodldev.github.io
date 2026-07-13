@@ -690,12 +690,12 @@ button:disabled,
   margin-bottom: 0;
 }
 
-.about-scroll-hint {
+.mobile-scroll-hint {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .about-scroll-hint {
+  .mobile-scroll-hint {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -706,11 +706,11 @@ button:disabled,
     pointer-events: none;
     color: rgba(255, 43, 117, 0.62);
     filter: drop-shadow(0 0 10px rgba(255, 43, 117, 0.35));
-    animation: about-scroll-hint-bob 1.6s ease-in-out infinite;
+    animation: mobile-scroll-hint-bob 1.6s ease-in-out infinite;
   }
 }
 
-@keyframes about-scroll-hint-bob {
+@keyframes mobile-scroll-hint-bob {
   0%,
   100% {
     transform: translateY(0);
@@ -724,7 +724,7 @@ button:disabled,
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .about-scroll-hint {
+  .mobile-scroll-hint {
     animation: none;
     opacity: 0.65;
   }
