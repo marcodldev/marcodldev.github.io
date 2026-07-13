@@ -1,8 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/portfolio2026/' : '/',
+export default defineConfig({
+  base: '/',
   plugins: [react()],
   server: {
     host: true,
@@ -10,4 +10,4 @@ export default defineConfig(({ mode }) => ({
     strictPort: false,
     open: true,
   },
-}))
+})
