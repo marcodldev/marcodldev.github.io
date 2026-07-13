@@ -6,8 +6,8 @@ export default function BrandLogo() {
       src={assetUrl('mdl-logo.png')}
       alt="MDL web dev"
       className="brand-logo"
-  width={140}
-  height={56}
+  width={160}
+  height={64}
       decoding="async"
     />
   )

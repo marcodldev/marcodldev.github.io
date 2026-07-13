@@ -14,7 +14,7 @@
   --font-display: 'Audiowide', sans-serif;
   --font-body: 'Rajdhani', sans-serif;
   --font-mono: 'VT323', monospace;
-  --nav-height: 72px;
+  --nav-height: 84px;
   --transition-smooth: 1s cubic-bezier(0.65, 0, 0.35, 1);
   --hud-corner: 12px;
   --cursor-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M4 2 L4 24 L11.5 17.5 L15.5 27 L19.5 25.5 L15.5 16.5 L26 16.5 L4 2 Z' fill='%23ff2b75'/%3E%3Cpath d='M4 2 L4 24 L11.5 17.5 L15.5 27 L19.5 25.5 L15.5 16.5 L26 16.5 L4 2 Z' fill='none' stroke='%23060606' stroke-width='0.6'/%3E%3C/svg%3E") 4 2, auto;
@@ -161,7 +161,7 @@ button:disabled,
 
 .top-nav-links {
   display: flex;
-  gap: 32px;
+  gap: 36px;
 }
 
 .top-nav-link {

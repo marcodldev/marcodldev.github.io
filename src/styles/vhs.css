@@ -527,7 +527,7 @@
 
 .top-nav-link {
   font-family: var(--font-mono);
-  font-size: 15px;
+  font-size: 17px;
   letter-spacing: 0.08em;
   color: var(--gray);
 }
@@ -549,7 +549,12 @@
 
 .top-nav-resume {
   font-family: var(--font-mono);
-  font-size: 15px;
+  font-size: 16px;
+}
+
+.top-nav-resume svg {
+  width: 12px;
+  height: 12px;
 }
 
 @keyframes nav-jitter {
