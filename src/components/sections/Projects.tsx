@@ -1,6 +1,7 @@
 import Section from '../Section'
 import ProjectGallery from '../projects/ProjectGallery'
 import MobileScrollHint from '../ui/MobileScrollHint'
+import MobileSwipeHint from '../ui/MobileSwipeHint'
 import { useScroll } from '../../context/ScrollContext'
 
 export default function Projects() {
@@ -14,6 +15,7 @@ export default function Projects() {
         <ProjectGallery />
       </div>
       <MobileScrollHint sectionIndex={2} sectionSelector=".projects" />
+      <MobileSwipeHint sectionIndex={2} nextSectionIndex={3} sectionSelector=".projects" />
     </Section>
   )
 }

@@ -738,6 +738,53 @@ button:disabled,
   }
 }
 
+.mobile-swipe-hint {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-swipe-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 14px;
+    bottom: 18px;
+    z-index: 210;
+    padding: 8px;
+    border: none;
+    background: transparent;
+    color: var(--accent);
+    filter: drop-shadow(0 0 14px rgba(255, 43, 117, 0.55));
+    cursor: var(--cursor-pointer);
+    animation: mobile-swipe-hint-bob 1.6s ease-in-out infinite;
+  }
+
+  .mobile-swipe-hint:active {
+    opacity: 0.85;
+  }
+}
+
+@keyframes mobile-swipe-hint-bob {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.82;
+  }
+
+  50% {
+    transform: translateX(8px);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-swipe-hint {
+    animation: none;
+    opacity: 0.9;
+  }
+}
+
 .about-content,
 .about-creative,
 .about-skills-main {

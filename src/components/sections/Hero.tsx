@@ -1,6 +1,7 @@
 import Section from '../Section'
 import Button from '../Button'
 import DomComment from '../DomComment'
+import MobileSwipeHint from '../ui/MobileSwipeHint'
 import { useScroll } from '../../context/ScrollContext'
 
 const HERO_DOM_COMMENT = `     __
@@ -39,6 +40,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <MobileSwipeHint sectionIndex={0} nextSectionIndex={1} sectionSelector=".hero" />
     </Section>
   )
 }

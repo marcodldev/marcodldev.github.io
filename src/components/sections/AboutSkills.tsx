@@ -2,6 +2,7 @@ import Section from '../Section'
 import SkillsRibbon from '../skills/SkillsRibbon'
 import VhsTimeline from '../about/VhsTimeline'
 import MobileScrollHint from '../ui/MobileScrollHint'
+import MobileSwipeHint from '../ui/MobileSwipeHint'
 import { useScroll } from '../../context/ScrollContext'
 
 export default function AboutSkills() {
@@ -46,6 +47,7 @@ export default function AboutSkills() {
         <SkillsRibbon />
       </div>
       <MobileScrollHint sectionIndex={1} sectionSelector=".about-skills" />
+      <MobileSwipeHint sectionIndex={1} nextSectionIndex={2} sectionSelector=".about-skills" />
     </Section>
   )
 }
